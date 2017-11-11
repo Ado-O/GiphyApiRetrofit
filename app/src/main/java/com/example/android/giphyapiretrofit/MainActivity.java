@@ -21,7 +21,6 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 
     ArrayList<String> listaGiphy = new ArrayList<String> ();
-    String ulazSearch;
     private ListView listView;
     private SearchView searchView;
 
@@ -51,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
                                 listaGiphy.add (data.getTitle ());
                                 ArrayAdapter<String> adapter = new ArrayAdapter<String> (MainActivity.this, android.R.layout.simple_list_item_1, listaGiphy);
+
                                 listView.setAdapter (adapter);
 
                                 //onClickListener from listView
