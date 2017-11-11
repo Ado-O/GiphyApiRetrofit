@@ -12,21 +12,17 @@ class Data {
     @SerializedName("title")
     @Expose
     private String title;
-    @SerializedName("images")
-    @Expose
-    public String images;
 
-    public Data(String title, String images) {
+    public Data(String title) {
         this.title = title;
-        this.images = images;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public String getImages() {
-        return images;
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
 
