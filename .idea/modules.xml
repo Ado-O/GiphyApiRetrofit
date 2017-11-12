@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GiphyApiRetrofit.iml" filepath="$PROJECT_DIR$/GiphyApiRetrofit.iml" />
       <module fileurl="file://C:\Users\User\Desktop\GiphyApiRetrofit-master\GiphyApiRetrofit.iml" filepath="C:\Users\User\Desktop\GiphyApiRetrofit-master\GiphyApiRetrofit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GiphyApiRetrofit-master.iml" filepath="$PROJECT_DIR$/GiphyApiRetrofit-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\User\Desktop\GiphyApiRetrofit-master\app\app.iml" filepath="C:\Users\User\Desktop\GiphyApiRetrofit-master\app\app.iml" />
     </modules>
   </component>
 </project>
