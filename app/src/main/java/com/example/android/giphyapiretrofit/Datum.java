@@ -3,12 +3,9 @@ package com.example.android.giphyapiretrofit;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by User on 12.11.2017.
- */
 
 public class Datum {
-    @SerializedName("images")
+    @SerializedName("Images")
     @Expose
     private Images images;
     @SerializedName("title")
