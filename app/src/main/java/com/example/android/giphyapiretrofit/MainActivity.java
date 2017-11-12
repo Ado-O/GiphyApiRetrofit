@@ -20,7 +20,9 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<String> listaGiphy = new ArrayList<String> ();
+ ArrayList<String> listaGiphy = new ArrayList<String> ();
+    ArrayList<String> urlList = new ArrayList<String>();
+
     private ListView listView;
     private SearchView searchView;
 
@@ -46,11 +48,14 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(Call<JsonResponse> call, Response<JsonResponse> response) {
                         if (response.isSuccessful ()) {
 
-                            for (Data data : response.body ().getDataList ()) {
+                         for (final Datum data : response.body ().getData ()) {
 
-                                listaGiphy.add (data.getTitle ());
+                             //url lista
+                             urlList.add(data.getImages ().getOriginal ().getUrl ());
+                             //title lista
+                             listaGiphy.add (data.getTitle ());
+                             //Adapter
                                 ArrayAdapter<String> adapter = new ArrayAdapter<String> (MainActivity.this, android.R.layout.simple_list_item_1, listaGiphy);
-
                                 listView.setAdapter (adapter);
 
                                 //onClickListener from listView
@@ -58,17 +63,14 @@ public class MainActivity extends AppCompatActivity {
                                         new AdapterView.OnItemClickListener() {
                                             @Override
                                             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                                                String catchGiphy = String.valueOf(adapterView.getItemAtPosition(i));
-
-                                                //send data in seconde activity
                                                 Intent myData = new Intent(MainActivity.this, Main2Activity.class);
-                                                myData.putExtra ("CatchData",catchGiphy);
-                                                startActivityForResult(myData, 1);
+                                                myData.putExtra ("CatchData", urlList.get(i));
+                                                startActivityForResult(myData, 0);
 
                                             }
                                         }
                                 );
-                            }
+                           }
 
                         } else {
                             Toast.makeText (MainActivity.this, "Response error", Toast.LENGTH_SHORT).show ();

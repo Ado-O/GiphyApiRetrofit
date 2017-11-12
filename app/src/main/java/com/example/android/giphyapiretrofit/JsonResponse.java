@@ -11,14 +11,30 @@ import java.util.List;
 public class JsonResponse {
     @SerializedName("data")
     @Expose
-    private List<Data> dataList = new ArrayList<> ();
+    private List<Datum> data = null;
 
-    public List<Data> getDataList() {
-        return dataList;
+    /**
+     * No args constructor for use in serialization
+     *
+     */
+    public JsonResponse() {
     }
 
-    public JsonResponse(List<Data> dataList) {
-        this.dataList = dataList;
+    /**
+     *
+     * @param data
+     */
+    public JsonResponse(List<Datum> data) {
+        super();
+        this.data = data;
+    }
+
+    public List<Datum> getData() {
+        return data;
+    }
+
+    public void setData(List<Datum> data) {
+        this.data = data;
     }
 
 }
