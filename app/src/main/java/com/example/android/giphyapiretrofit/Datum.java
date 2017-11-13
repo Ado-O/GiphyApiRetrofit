@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 
 public class Datum {
-    @SerializedName("Images")
+    @SerializedName("images")
     @Expose
     private Images images;
     @SerializedName("title")
