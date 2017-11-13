@@ -14,6 +14,6 @@ public interface ApiInterface {
             .build();
 
     @GET("search")
-    Call<JsonResponse> getDownsized(@Query("q") String type, @Query("api_key") String key, @Query("limit") String limit);
+    Call<TopObject> getDownsized(@Query("q") String type, @Query("api_key") String key, @Query("limit") String limit);
 
 }
