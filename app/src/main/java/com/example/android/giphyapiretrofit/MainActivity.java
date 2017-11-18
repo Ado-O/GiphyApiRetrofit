@@ -66,30 +66,6 @@ public class MainActivity extends AppCompatActivity {
                                    );
                           }
 
-                         //for (final Datum data : response.body ().getData ()) {
-                         //
-                         //    //url lista
-                         //    urlList.add(data.getImages ().getOriginal ().getUrl ());
-                         //    //title lista
-                         //    listaGiphy.add (data.getTitle ());
-                         //    //Adapter
-                         //       ArrayAdapter<String> adapter = new ArrayAdapter<String> (MainActivity.this, android.R.layout.simple_list_item_1, listaGiphy);
-                         //       listView.setAdapter (adapter);
-                         //
-                         //       //onClickListener from listView
-                         //       listView.setOnItemClickListener(
-                         //               new AdapterView.OnItemClickListener() {
-                         //                   @Override
-                         //                   public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                         //                       Intent myData = new Intent(MainActivity.this, Main2Activity.class);
-                         //                       myData.putExtra ("CatchData", urlList.get(i));
-                         //                       startActivityForResult(myData, 0);
-                         //
-                         //                   }
-                         //               }
-                         //       );
-                         //  }
-
                         } else {
                             Toast.makeText (MainActivity.this, "Response error", Toast.LENGTH_SHORT).show ();
                         }
